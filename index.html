@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Java Script Practice</title>
+  </head>
+  <body>
+    <h1>Practice different JavaScript Arrays Mathods</h1>
+    <h2>Every()</h2>
+    <h3>
+      Click the button to check if every element in the array has a value above
+      this number:
+    </h3>
+    <p id="arrayElements"></p>
+    <input type="number" name="age" id="ageToCheck" value="18" />
+
+    <button type="button" onclick="check()">Check</button>
+    <p id="checkedAge"></p>
+
+    <h3>Are all numbers even?</h3>
+    <p>Enter numbers separated by commas:</p>
+    <input type="text" id="numberInput" placeholder="e.g. 2,4,6" />
+    <button type="button" onClick="checkAllEven()">Check</button>
+    <script>
+      const ages = [22, 24, 20, 34];
+      document.getElementById("arrayElements").innerHTML = ages;
+
+      function checkAge(age) {
+        return age > document.getElementById("ageToCheck").value;
+      }
+
+      function check() {
+        document.getElementById("checkedAge").innerHTML = ages.every(checkAge);
+      }
+
+      const inputStr = document.getElementById("numberInput").value;
+      const arrInputs = inputs.split(",").map((n) => parseInt(n.trim()));
+      const allEven = arrInputs.every((num) => num % 2 === 0);
+    </script>
+  </body>
+</html>
