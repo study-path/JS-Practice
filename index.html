@@ -6,7 +6,7 @@
     <title>Java Script Practice</title>
   </head>
   <body>
-    <h1>Practice different JavaScript Arrays Mathods</h1>
+    <h1>Practice different JavaScript Arrays Methods</h1>
     <h2>Every()</h2>
     <h3>
       Click the button to check if every element in the array has a value above
@@ -22,6 +22,8 @@
     <p>Enter numbers separated by commas:</p>
     <input type="text" id="numberInput" placeholder="e.g. 2,4,6" />
     <button type="button" onClick="checkAllEven()">Check</button>
+    <p id="inputNums"></p>
+    <p id="answerEven"></p>
     <script>
       const ages = [22, 24, 20, 34];
       document.getElementById("arrayElements").innerHTML = ages;
@@ -34,9 +36,21 @@
         document.getElementById("checkedAge").innerHTML = ages.every(checkAge);
       }
 
-      const inputStr = document.getElementById("numberInput").value;
-      const arrInputs = inputs.split(",").map((n) => parseInt(n.trim()));
-      const allEven = arrInputs.every((num) => num % 2 === 0);
+      function checkAllEven() {
+        const inputStr = document.getElementById("numberInput").value;
+        const arrInputs = inputStr.split(",").map((n) => parseInt(n.trim()));
+        const allEven = arrInputs.every((num) => num % 2 === 0);
+        const res = allEven
+          ? "All numbers are even"
+          : "Not all numbers are even";
+        document.getElementById("answerEven").innerHTML = res;
+        document.getElementById("answerEven").style.color = allEven
+          ? "green"
+          : "red";
+        document.getElementById("inputNums").innerHTML =
+          document.getElementById("numberInput").value;
+        document.getElementById("numberInput").value = "";
+      }
     </script>
   </body>
 </html>
