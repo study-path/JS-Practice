@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Java Script Practice</title>
+  </head>
+  <body>
+    <h1>Practice different JavaScript Arrays Methods</h1>
+    <h2>Every()</h2>
+    <h3>
+      Click the button to check if every element in the array has a value above
+      this number:
+    </h3>
+    <p id="arrayElements"></p>
+    <input type="number" name="age" id="ageToCheck" value="18" />
+
+    <button type="button" onclick="check()">Check</button>
+    <p id="checkedAge"></p>
+    <hr>
+    <h3>Are all numbers even?</h3>
+    <p>Enter numbers separated by commas:</p>
+    <input type="text" id="numberInput" placeholder="e.g. 2,4,6" />
+    <button type="button" onClick="checkAllEven()">Check</button>
+    <p id="inputNums"></p>
+    <p id="answerEven"></p>
+    <hr>
+    <h3>Check if all products are from one brand</h3>
+    <p>
+      <ul id="productList"></ul>
+    </p>
+    <input type="text"  id="brandInput" placeholder="e.g. Nike">
+    <button type="button" onClick = "checkBrand()">Check Brand</button>
+    <p id="brandsChecked"></p>
+    
+  </body>
+  <script src="scripts/every.js"></script>
+</html>
